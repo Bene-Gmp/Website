@@ -6,7 +6,7 @@
     <title>Botsonic Integration</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -14,12 +14,13 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            background-color: #1e1e1e;
+            color: white;
         }
 
         header {
-            background-color: #007bff;
-            color: white;
+            background-color: #000;
+            color: #fff;
             padding: 20px;
             text-align: center;
             width: 100%;
@@ -27,49 +28,35 @@
 
         h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 2.5em;
+            font-weight: bold;
         }
 
         .chatbot-container {
             margin-top: 50px;
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
             text-align: center;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background-color: #292929;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .chatbot-container p {
-            font-size: 1.2em;
-            color: #333;
-        }
-
-        .chatbot-container button {
-            padding: 10px 20px;
-            font-size: 1em;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .chatbot-container button:hover {
-            background-color: #0056b3;
+            font-size: 1.5em;
+            color: #d0d0d0;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Willkommen auf unserer Webseite</h1>
+        <h1>Willkommen bei FIT STAR</h1>
     </header>
 
     <div class="chatbot-container">
-        <p>Um den Botsonic-Chatbot auszuprobieren, klicken Sie auf den Button unten:</p>
-        <button id="open-chatbot">Chatbot starten</button>
+        <p>Der Chatbot wird automatisch gestartet. Bitte warten...</p>
     </div>
 
     <!-- Botsonic Einbettungscode -->
@@ -92,10 +79,8 @@
         token: "6980a4e3-af80-4cb5-93a8-a7871c51b542",
       });
 
-      // Startet den Chatbot beim Klicken auf den Button
-      document.getElementById('open-chatbot').addEventListener('click', function() {
-        Botsonic('show');
-      });
+      // Startet den Chatbot automatisch
+      Botsonic('show');
     </script>
     <!-- Ende des Botsonic Einbettungscodes -->
 
